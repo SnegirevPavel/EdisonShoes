@@ -1,0 +1,158 @@
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        max-width: 100%;
+    }
+
+    // ~~~~~~~~~~~~~~Burger-menu~~~~~~~~~~~~~~ 
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile div{
+        display: block;
+        position: fixed;
+        top:30px;
+        right:15px;
+        width: 50px;
+        height: 50px;
+        z-index:99;
+        box-sizing: content-box;
+        cursor: pointer;
+        border-radius: 20%;
+    }
+
+    .mobile div span{
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 30px;
+        background-color: #4D66EC;
+        border-radius: 13px;
+        transition-duration: .4s;
+    }
+
+    .mobile div span:nth-child(1){
+        top:14px;
+    }
+    .mobile div span:nth-child(2){
+        top:23px;
+    }
+    .mobile div span:nth-child(3){
+        bottom:14px;
+    }
+
+    .mobile div.active span:nth-child(1){
+        transform: translate(-15px,9px) rotate(-45deg)
+    }
+
+    .mobile div.active span:nth-child(2){
+        transition-duration: 0s;
+        opacity: 0;
+    }
+    .mobile div.active span:nth-child(3){
+        transform: translate(-15px,-9px) rotate(45deg)
+    }
+
+    .mobile nav{
+        display: block;
+        position: fixed;
+        top:45px;
+        right:40px;
+        height: 50px;
+        width: 50px;
+        border-radius: 10%;
+        z-index: 90;
+        transition-duration: .4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .mobile nav.open{
+        background-color: rgba(216, 212, 249, 0.9);
+        width: 100vw;
+        height: 100vh;
+        right: 0px;
+        top:0px;
+        border-radius: 0;
+        justify-content: end;
+    }
+
+    .mobile nav ul{
+        display: none;
+    }
+
+    .mobile nav ul.show{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile nav ul li{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 30px;
+        background-color: transparent;
+        width: 100%;
+        opacity: 0;
+        animation-name: fadein;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .mobile ul li:not(:last-child) {
+        margin-bottom: 22px;
+    }
+
+    .mobile ul li a {
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.1em;
+        color: #404254;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 5px 0;
+
+        &:hover{
+            transform: scale(1.3);
+            transition: 0.3s;
+        }
+       
+    }
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+             
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    // ~~~~~~~~~~~~Burger-menu-end~~~~~~~~~~~~ 
+}

@@ -974,7 +974,7 @@ body {
   }
 
   .mobile nav.open {
-    background-color: rgba(216, 212, 249, 0.9);
+    background-color: rgba(216, 212, 249, 1);
     width: 100vw;
     height: 100vh;
     right: 0px;

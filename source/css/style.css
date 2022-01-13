@@ -857,6 +857,12 @@ body {
   color: #2F3250;
   opacity: 0.3;
 }
+@media (max-width: 575px) {
+  .footer__copyright {
+    font-size: 8px;
+    line-height: 100%;
+  }
+}
 .footer__copyright:hover {
   border-bottom: 1px solid rgba(47, 50, 80, 0.3);
 }
@@ -866,6 +872,12 @@ body {
   line-height: 100%;
   color: #2F3250;
   opacity: 0.3;
+}
+@media (max-width: 575px) {
+  .footer__confidence {
+    font-size: 8px;
+    line-height: 100%;
+  }
 }
 .footer__confidence:hover {
   border-bottom: 1px solid rgba(47, 50, 80, 0.3);

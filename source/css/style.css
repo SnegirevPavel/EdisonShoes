@@ -980,9 +980,6 @@ body {
     right: 0px;
     top: 0px;
     border-radius: 0;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
   }
 
   .mobile nav ul {
@@ -1012,7 +1009,6 @@ body {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-right: 10px;
     background-color: transparent;
     width: 100%;
     opacity: 0;

@@ -1012,7 +1012,7 @@ body {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-right: 30px;
+    padding-right: 10px;
     background-color: transparent;
     width: 100%;
     opacity: 0;

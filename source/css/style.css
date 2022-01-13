@@ -974,7 +974,7 @@ body {
   }
 
   .mobile nav.open {
-    background-color: rgba(216, 212, 249, 1);
+    background-color: #d8d4f9;
     width: 100vw;
     height: 100vh;
     right: 0px;
@@ -1011,7 +1011,7 @@ body {
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-start;
+            justify-content: flex-end;
     padding-right: 10px;
     background-color: transparent;
     width: 100%;

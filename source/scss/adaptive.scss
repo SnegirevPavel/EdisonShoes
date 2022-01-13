@@ -88,7 +88,7 @@
     }
 
     .mobile nav.open{
-        background-color: rgba(216, 212, 249, 0.9);
+        background-color: rgba(216, 212, 249, 1);
         width: 100vw;
         height: 100vh;
         right: 0px;
@@ -113,7 +113,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 30px;
+        padding-right: 10px;
         background-color: transparent;
         width: 100%;
         opacity: 0;

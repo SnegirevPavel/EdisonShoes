@@ -240,7 +240,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#dfe9f3), to(white));
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     -webkit-box-shadow: 0 1px 10px 1px grey;
             box-shadow: 0 1px 10px 1px grey;
     width: 100%;
@@ -316,8 +317,14 @@ body {
 }
 @media (max-width: 575px) {
   .header__btn {
-    margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 10px;
+    font-size: 0;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#dfe9f3), to(white));
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    padding: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 10px 10px 10px 0px rgba(34, 60, 80, 0.2);
   }
 }
 .header__btn::before {
@@ -329,10 +336,21 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 575px) {
+  .header__btn::before {
+    left: 17px;
+  }
+}
 .header__btn:nth-child(2)::before {
   background: transparent url(../../img/svg/heart.svg) no-repeat left center;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 575px) {
+  .header__btn:nth-child(2)::before {
+    left: 16px;
+    top: 1px;
+  }
 }
 .header__btn:nth-child(3) {
   margin-right: 0;
@@ -341,6 +359,12 @@ body {
   background: transparent url(../../img/svg/shopping-cart.svg) no-repeat left center;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 575px) {
+  .header__btn:nth-child(3)::before {
+    left: 15px;
+    top: 1px;
+  }
 }
 .header__btn:hover {
   -webkit-transform: scale(1.2);

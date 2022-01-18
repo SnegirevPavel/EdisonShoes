@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
+  border-bottom: 2px solid #4A5FCF;
 }
 .section-more::after {
   content: "";
@@ -140,10 +141,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: -3px;
   width: 0;
-  height: 2px;
-  background-color: black;
+  height: 3px;
+  background-color: white;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
+  border-bottom: 0;
 }
 .section-more:hover:after {
   content: "";
@@ -152,8 +154,8 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   bottom: -3px;
-  height: 2px;
-  background-color: #4A5FCF;
+  height: 3px;
+  background-color: white;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
 }
@@ -203,6 +205,12 @@ body {
   line-height: 150%;
   color: #404254;
   background: #FCFCFC;
+  position: relative;
+}
+@media (max-width: 575px) {
+  body {
+    margin-top: 80px;
+  }
 }
 
 .header {
@@ -225,6 +233,19 @@ body {
   .header__menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media (max-width: 575px) {
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    -webkit-box-shadow: 0 1px 10px 1px grey;
+            box-shadow: 0 1px 10px 1px grey;
+    width: 100%;
+    padding: 20px;
+    z-index: 80;
   }
 }
 .header__logo {
@@ -297,7 +318,6 @@ body {
   .header__btn {
     margin-bottom: 20px;
     font-size: 16px;
-    color: #2F3250;
   }
 }
 .header__btn::before {
@@ -334,6 +354,11 @@ body {
 .header__intro {
   max-width: 550px;
   padding-bottom: 243px;
+}
+@media (max-width: 575px) {
+  .header__intro {
+    padding-top: 80px;
+  }
 }
 .header__title {
   font-family: Prosto One;
@@ -917,7 +942,7 @@ body {
   .mobile div {
     display: block;
     position: fixed;
-    top: 30px;
+    top: 15px;
     right: 15px;
     width: 50px;
     height: 50px;
@@ -1052,7 +1077,7 @@ body {
     font-size: 18px;
     line-height: 130%;
     letter-spacing: 0.1em;
-    color: #2F3250;
+    color: #4A5FCF;
     text-transform: uppercase;
     text-decoration: none;
     padding: 5px 0;

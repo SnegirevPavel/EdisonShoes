@@ -11,6 +11,11 @@ body{
     color: #404254;
 
     background: #FCFCFC;
+    
+    position: relative;
+    @media (max-width: 575px){
+        margin-top: 80px;
+    }
 }
 
 // HEADER---------->

@@ -119,3 +119,31 @@
 .hide{
     display: none;
 }
+
+.to-up {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #4D66EC;
+    z-index: 99;
+    cursor: pointer;
+    color: #4D66EC;
+    font-size: 32px;
+    align-items: flex-end;
+    text-align: center;
+    padding-top: 6px;
+    display: none;
+
+    @media (max-width: 575px) {
+        visibility: hidden;
+    }
+
+    &:hover{
+        background-color: #4D66EC;
+        color:white;
+        border: 2px solid white;
+    }
+}

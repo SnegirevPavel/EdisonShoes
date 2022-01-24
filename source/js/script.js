@@ -13,23 +13,13 @@ $(document).ready(function(){
 
 // Кнопка наверх----------
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    let toTopBtn = document.querySelector('.to-up');
-
-    window.onscroll = function () {
-        if (window.pageYOffset > 780) {
-            toTopBtn.style.display = 'block'
-        } else {
-            toTopBtn.style.display = 'none'
-        }
-    }
-
-    // плавный скролл наверх 
-    toTopBtn.addEventListener('click', function () {
-        window.scrollBy({
-            top: -document.documentElement.scrollHeight,
-            behavior: 'smooth'
-        });
+jQuery(($) => {
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 780) $('.to-up').fadeIn();
+        else $('.to-up').fadeOut();
+    });
+    $('.to-up').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 566);
+        return false;
     });
 });
